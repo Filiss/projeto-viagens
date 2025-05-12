@@ -89,6 +89,7 @@ body {
     width: 125px;
     height: 200px;
     position: relative;
+    z-index: 3;
 }
 
 .thumb .thumb-item img {
@@ -132,5 +133,131 @@ body {
     background-color: transparent;
     color: white;
     cursor: pointer;
-    transition: 0.5s;
+    transition: 0.3s;
+}
+
+/*Animações do Thumb*/
+
+.container.next .thumb {
+    animation: slideNextThumb 0.5s ease-in-out 1 forwards;
+    animation-delay: 2s;
+}
+
+@keyframes slideNextThumb {
+    from {
+        transform: translateX(150px);
+    }
+}
+
+/*Animação da ultima thumb*/
+
+.container.next .thumb .thumb-item:nth-last-child(1) {
+    animation: slidePrevThumb 0.5s linear 1 forwards;
+}
+
+@keyframes slidePrevThumb {
+    from {
+        width: 0;
+        opacity: 0;
+    }
+}
+
+/*Animações do texto*/
+
+.container .list .list-item:nth-last-child(1) .content .title, 
+.container .list .list-item:nth-last-child(1) .content .description, 
+.container .list .list-item:nth-last-child(1) .content .buttons {
+    transform: translateY(50px);
+    filter: blur(20px);
+    opacity: 0;
+    animation: showContent 0.5s 1s linear 1 forwards
+}
+
+@keyframes showContent {
+    to {
+        transform: translateY(0);
+        filter: blur(0);
+        opacity: 1;
+    }
+}
+
+.container .list .list-item:nth-last-child(1) .content .title {
+    animation-delay: 0.3s;
+}
+
+.container .list .list-item:nth-last-child(1) .content .description {
+    animation-delay: 0.5s;
+}
+
+.container .list .list-item:nth-last-child(1) .content .buttons {
+    animation-delay: 0.7s;
+}
+
+/*Imagem principal Next*/
+
+.container.next .list .list-item:nth-last-child(1) img {
+    width: 150px;
+    height: 220px;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    border-radius: 30px;
+    animation: showImage 0.3s linear 1 forwards;
+}
+
+@keyframes showImage {
+    to {
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+    
+}
+
+/*Imagem principal Back*/
+
+.container.back .list .list-item:nth-last-child(1) img{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        animation: hideImage 0.5s 0.2s linear 1 forwards;
+}
+
+.container.back .list .list-item:nth-last-child(1) .content{
+    animation: hideContent 0.2s 0.2s linear 1 forwards;
+}
+
+/*.container.back .list .list-item:nth-last-child(1) .content {
+    animation: hideContent 0.2s 0.2s linear 1 none;
+}
+
+*/
+@keyframes hideContent {
+  0% {
+    opacity: 1;
+    width: auto;
+    overflow: visible;
+  }
+  100% {
+    opacity: 0;
+    width: 0;
+    overflow: hidden;
+  }
+}
+
+
+@keyframes hideImage {
+    to {
+        width: 125px;
+        height: 200px;
+        position: absolute;
+        bottom: 50px;
+        left: 50%;
+        border-radius: 30px;
+    }
+
 }
