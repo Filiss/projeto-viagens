@@ -21,9 +21,10 @@ function moveItems(type){
         thumb.prepend(thumbItems[thumbItems.length - 1])
         container.classList.add('back')
     }
+    
+    setTimeout(() => {
+        container.classList.remove('next')
+        container.classList.remove('back')
+    }, 2000)
+    
 }
-
-setTimeout(() => {
-    container.classList.remove('next')
-    container.classList.remove('back')
-}, 3000)
