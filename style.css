@@ -1,166 +1,163 @@
 @charset "UTF-8";
 
 * {
-    text-decoration: none;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: "Merriweather", serif;
-    overflow: hidden;
+  text-decoration: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Merriweather", serif;
+  overflow: hidden;
 }
 
 body {
-    background-color: #000;
-    color: #eee;
-    font-size: 12px;
+  background-color: #000;
+  color: #eee;
+  font-size: 12px;
 }
 
 .container {
-    height: 100vh;
-    width: 100vw;   
+  height: 100vh;
+  width: 100vw;
 }
 
 .list-item {
-    width: 100%;
-    height: 100%;
-    position: absolute;
+  width: 100%;
+  height: 100%;
+  position: absolute;
 }
 
 .list-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: brightness(90%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(90%);
 }
 
 .content {
-    position: absolute;
-    top: 20%;
-    right: 10%;
-    padding-right: 30%;
-    width: 80%;
-    color: #eee;
-    text-shadow: 0 5px 10px #0004;
+  position: absolute;
+  top: 20%;
+  right: 10%;
+  padding-right: 30%;
+  width: 80%;
+  color: #eee;
+  text-shadow: 0 5px 10px #0004;
 }
 
 .title {
-    font-family: "Raleway", sans-serif;
-    font-size: 3.5em;
-    font-weight: 800;
-    margin-bottom: 20px;
-    line-height: 1.3em;
+  font-family: "Raleway", sans-serif;
+  font-size: 3.5em;
+  font-weight: 800;
+  margin-bottom: 20px;
+  line-height: 1.3em;
 }
 
 .description {
-    font-size: 1.3em;
-    font-weight: 400;
-    line-height: 1.5em;
-    max-width: 700px;
+  font-size: 1.3em;
+  font-weight: 400;
+  line-height: 1.5em;
+  max-width: 700px;
 }
 
 .buttons button {
-    width: 150px;
-    height: 45px;
-    margin-top: 20px;
-    border: none;
-    color: black;
-    font-size: 16px;
-    font-weight: 600;
-    text-transform: uppercase;
+  width: 150px;
+  height: 45px;
+  margin-top: 20px;
+  border: none;
+  color: black;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 
 .buttons button:hover {
-    border: 1px solid white;
-    background-color: transparent;
-    color: white;
-    cursor: pointer;
-    transition: 0.8s;
+  border: 1px solid white;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+  transition: 0.8s;
 }
 
 .thumb {
-    position: absolute;
-    bottom: 6%;
-    left: 50%;
-    display: flex;
-    gap: 25px;
+  position: absolute;
+  bottom: 6%;
+  left: 50%;
+  display: flex;
+  gap: 25px;
 }
 
 .thumb .thumb-item {
-    width: 125px;
-    height: 200px;
-    position: relative;
-
+  width: 125px;
+  height: 200px;
+  position: relative;
 }
 
 .thumb .thumb-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: brightness(90%);
-    border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(90%);
+  border-radius: 10px;
 }
 
 .content h3 {
-    font-family: "Raleway", sans-serif;
-    font-size: 1.5em;
-    font-weight: 800;
-    line-height: 1.3em;
-    width: 155px;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.5em;
+  font-weight: 800;
+  line-height: 1.3em;
+  width: 155px;
 }
 
 .arrows {
-    display: flex;
-    position: absolute;
-    bottom: 20%;
-    left: 10%;
-    width: 20%;
-    align-items: center;
-    gap: 4%;
+  display: flex;
+  position: absolute;
+  bottom: 20%;
+  left: 10%;
+  width: 20%;
+  align-items: center;
+  gap: 4%;
 }
 
 .arrows button {
-    border: none;
-    border-radius: 12px;
-    padding: 20px 17px;
-    background-color: rgb(255, 255, 255);
-    cursor: pointer;
-    font-weight: 700;
-    font-size: 1.3em;
+  border: none;
+  border-radius: 12px;
+  padding: 20px 17px;
+  background-color: rgb(255, 255, 255);
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1.3em;
 }
 
 .arrows button:hover {
-    border: 1px solid white;
-    background-color: transparent;
-    color: white;
-    cursor: pointer;
-    transition: 0.3s;
+  border: 1px solid white;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 /*Animações do Thumb*/
 
 .container.next .thumb {
-    animation: nextThumb 0.5s linear 1 forwards;
+  animation: nextThumb 0.5s linear 1 forwards;
 }
 
 @keyframes nextThumb {
-    from {
-        transform: translateX(150px);
-    }
-    
+  from {
+    transform: translateX(150px);
+  }
 }
 
 /*Animação última thumb*/
 
 .container.next .thumb .thumb-item:nth-last-child(1) {
-    animation: lastThumb 0.5s linear 1 forwards;
+  animation: lastThumb 0.5s linear 1 forwards;
 }
 
 @keyframes lastThumb {
-    from {
-        width: 0;
-        opacity: 0;
-    }
-    
+  from {
+    width: 0;
+    opacity: 0;
+  }
 }
 
 /*Textos principais*/
@@ -168,119 +165,118 @@ body {
 .container .list .list-item:nth-last-child(1) .content .title,
 .container .list .list-item:nth-last-child(1) .content .description,
 .container .list .list-item:nth-last-child(1) .content .buttons {
-    transform: translateY(50px);
-    filter: blur(20px);
-    opacity: 0;
-    animation: showContent 0.5s 1s linear 1 forwards;
+  transform: translateY(50px);
+  filter: blur(20px);
+  opacity: 0;
+  animation: showContent 0.5s 1s linear 1 forwards;
 }
 
 @keyframes showContent {
-    to {
-        transform: translateY(0);
-        filter: blur(0);
-        opacity: 1;
-    }
-    
+  to {
+    transform: translateY(0);
+    filter: blur(0);
+    opacity: 1;
+  }
 }
 
 .container .list .list-item:nth-last-child(1) .content .title {
-    animation-delay: 0.6s;
+  animation-delay: 0.6s;
 }
 .container .list .list-item:nth-last-child(1) .content .description {
-    animation-delay: 0.8s;
+  animation-delay: 0.8s;
 }
 .container .list .list-item:nth-last-child(1) .content .buttons {
-    animation-delay: 1s;
+  animation-delay: 1s;
 }
 
 /*Imagem principal Next*/
 
 .container.next .list .list-item:nth-last-child(1) img {
-    width: 150px;
-    height: 220px;
-    position: absolute;
-    bottom: 6%;
-    left: 50%;
-    border-radius: 30px;
-    animation: showImage 0.5s linear 1 forwards;
+  width: 150px;
+  height: 220px;
+  position: absolute;
+  bottom: 6%;
+  left: 50%;
+  border-radius: 30px;
+  animation: showImage 0.5s linear 1 forwards;
 }
 
 @keyframes showImage {
-    to {
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        border-radius: 0;
-    }
-    
+  to {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+  }
 }
 
 /*Imagem principal Back*/
 
 .container.back .list .list-item:nth-child(1) img {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    animation: hideImage 0.5s linear 1 forwards;
-    z-index: 2;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  animation: hideImage 0.5s linear 1 forwards;
+  z-index: 2;
 }
 
 @keyframes hideImage {
-    to {
-        width: 125px;
-        height: 200px;
-        border-radius: 10px;
-        left: 50%;
-        bottom: 6%;
-    }
-    
+  to {
+    width: 125px;
+    height: 200px;
+    border-radius: 10px;
+    left: 50%;
+    bottom: 6%;
+  }
 }
 
-
 @media screen and (max-width: 768px) {
-    * {
-        overflow: hidden;
-    }
-    .content {
-        top: 10%;
-        right: 5%;
-        padding-right: 20%;
-        width: 90%;
-    }
-    .thumb {
-        left: 40%;
-    }
-    .thumb .thumb-item {
-        width: 100px;
-        height: 150px;
-    }
+  .list-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(90%);
+  }
+  .content {
+    top: 10%;
+    right: 5%;
+    padding-right: 20%;
+    width: 90%;
+  }
+  .thumb {
+    left: 40%;
+  }
+  .thumb .thumb-item {
+    width: 100px;
+    height: 150px;
+  }
 
-    .thumb .thumb-item img {
-        border-radius: 5px;
-    }
-    .thumb .thumb-item:nth-child(n+3) {
-        display: none;
-    }
-    .arrows button {
-        padding: 15px 12px;
-        font-size: 1.2em;
-    }
-    .container.back .list .list-item:nth-child(1) img {
+  .thumb .thumb-item img {
+    border-radius: 5px;
+  }
+  .thumb .thumb-item:not(:first-child):not(:nth-last-child(2)) {
+    display: none;
+  }
+  .arrows button {
+    padding: 15px 12px;
+    font-size: 1.2em;
+  }
+  .container.back .list .list-item:nth-child(1) img {
     position: absolute;
     bottom: 0;
     left: 0;
     animation: hideImage 0.5s linear 1 forwards;
     z-index: 2;
-    }
+  }
 
-    @keyframes hideImage {
+  @keyframes hideImage {
     to {
-        width: 100px;
-        height: 150px;
-        border-radius: 5px;
-        left: 40%;
-        bottom: 6%;
+      width: 100px;
+      height: 150px;
+      border-radius: 5px;
+      left: 40%;
+      bottom: 6%;
     }
-}
+  }
 }

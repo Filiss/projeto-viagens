@@ -5,8 +5,8 @@ let container = document.querySelector('.container')
 let list = document.querySelector('.container .list')
 let thumb = document.querySelector('.container .thumb')
 
-btnNext.onclick = () => moveItems('next')
-btnBack.onclick = () => moveItems('back')
+btnNext.onclick = () => moveItems('back')
+btnBack.onclick = () => moveItems('next')
 
 function moveItems(type){
     let listItems = document.querySelectorAll('.list .list-item')
